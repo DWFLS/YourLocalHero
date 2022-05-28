@@ -14,7 +14,9 @@ Features:
 
 
 Version history
+
 v1.0.0.1
+
 -Readjusted leftside panel.
 
 
