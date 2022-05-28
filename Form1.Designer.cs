@@ -138,7 +138,7 @@
             nameLabel.AutoSize = true;
             nameLabel.BackColor = System.Drawing.Color.White;
             nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            nameLabel.Location = new System.Drawing.Point(3, 25);
+            nameLabel.Location = new System.Drawing.Point(17, 27);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(52, 16);
             nameLabel.TabIndex = 4;
@@ -149,7 +149,7 @@
             classLabel.AutoSize = true;
             classLabel.BackColor = System.Drawing.Color.White;
             classLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            classLabel.Location = new System.Drawing.Point(105, 52);
+            classLabel.Location = new System.Drawing.Point(119, 54);
             classLabel.Name = "classLabel";
             classLabel.Size = new System.Drawing.Size(50, 16);
             classLabel.TabIndex = 6;
@@ -160,7 +160,7 @@
             alignmentLabel.AutoSize = true;
             alignmentLabel.BackColor = System.Drawing.Color.White;
             alignmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            alignmentLabel.Location = new System.Drawing.Point(105, 75);
+            alignmentLabel.Location = new System.Drawing.Point(119, 77);
             alignmentLabel.Name = "alignmentLabel";
             alignmentLabel.Size = new System.Drawing.Size(79, 16);
             alignmentLabel.TabIndex = 8;
@@ -171,7 +171,7 @@
             hiring_FeeLabel.AutoSize = true;
             hiring_FeeLabel.BackColor = System.Drawing.Color.White;
             hiring_FeeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            hiring_FeeLabel.Location = new System.Drawing.Point(105, 98);
+            hiring_FeeLabel.Location = new System.Drawing.Point(119, 100);
             hiring_FeeLabel.Name = "hiring_FeeLabel";
             hiring_FeeLabel.Size = new System.Drawing.Size(83, 16);
             hiring_FeeLabel.TabIndex = 10;
@@ -182,7 +182,7 @@
             aboutLabel.AutoSize = true;
             aboutLabel.BackColor = System.Drawing.Color.White;
             aboutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            aboutLabel.Location = new System.Drawing.Point(3, 229);
+            aboutLabel.Location = new System.Drawing.Point(19, 197);
             aboutLabel.Name = "aboutLabel";
             aboutLabel.Size = new System.Drawing.Size(51, 16);
             aboutLabel.TabIndex = 12;
@@ -193,7 +193,7 @@
             strengthLabel.AutoSize = true;
             strengthLabel.BackColor = System.Drawing.Color.White;
             strengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            strengthLabel.Location = new System.Drawing.Point(431, 52);
+            strengthLabel.Location = new System.Drawing.Point(445, 54);
             strengthLabel.Name = "strengthLabel";
             strengthLabel.Size = new System.Drawing.Size(68, 16);
             strengthLabel.TabIndex = 14;
@@ -204,7 +204,7 @@
             dexterityLabel.AutoSize = true;
             dexterityLabel.BackColor = System.Drawing.Color.White;
             dexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dexterityLabel.Location = new System.Drawing.Point(431, 75);
+            dexterityLabel.Location = new System.Drawing.Point(445, 77);
             dexterityLabel.Name = "dexterityLabel";
             dexterityLabel.Size = new System.Drawing.Size(72, 16);
             dexterityLabel.TabIndex = 16;
@@ -215,7 +215,7 @@
             conditionLabel.AutoSize = true;
             conditionLabel.BackColor = System.Drawing.Color.White;
             conditionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            conditionLabel.Location = new System.Drawing.Point(431, 98);
+            conditionLabel.Location = new System.Drawing.Point(445, 100);
             conditionLabel.Name = "conditionLabel";
             conditionLabel.Size = new System.Drawing.Size(76, 16);
             conditionLabel.TabIndex = 18;
@@ -226,7 +226,7 @@
             intelligenceLabel.AutoSize = true;
             intelligenceLabel.BackColor = System.Drawing.Color.White;
             intelligenceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            intelligenceLabel.Location = new System.Drawing.Point(431, 121);
+            intelligenceLabel.Location = new System.Drawing.Point(445, 123);
             intelligenceLabel.Name = "intelligenceLabel";
             intelligenceLabel.Size = new System.Drawing.Size(91, 16);
             intelligenceLabel.TabIndex = 20;
@@ -237,7 +237,7 @@
             wisdomLabel.AutoSize = true;
             wisdomLabel.BackColor = System.Drawing.Color.White;
             wisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            wisdomLabel.Location = new System.Drawing.Point(431, 144);
+            wisdomLabel.Location = new System.Drawing.Point(445, 146);
             wisdomLabel.Name = "wisdomLabel";
             wisdomLabel.Size = new System.Drawing.Size(67, 16);
             wisdomLabel.TabIndex = 22;
@@ -248,7 +248,7 @@
             charismaLabel.AutoSize = true;
             charismaLabel.BackColor = System.Drawing.Color.White;
             charismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            charismaLabel.Location = new System.Drawing.Point(431, 167);
+            charismaLabel.Location = new System.Drawing.Point(445, 169);
             charismaLabel.Name = "charismaLabel";
             charismaLabel.Size = new System.Drawing.Size(76, 16);
             charismaLabel.TabIndex = 24;
@@ -259,7 +259,7 @@
             total_ScoreLabel.AutoSize = true;
             total_ScoreLabel.BackColor = System.Drawing.Color.White;
             total_ScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            total_ScoreLabel.Location = new System.Drawing.Point(105, 121);
+            total_ScoreLabel.Location = new System.Drawing.Point(119, 123);
             total_ScoreLabel.Name = "total_ScoreLabel";
             total_ScoreLabel.Size = new System.Drawing.Size(92, 16);
             total_ScoreLabel.TabIndex = 26;
@@ -270,7 +270,7 @@
             special_TraitsLabel.AutoSize = true;
             special_TraitsLabel.BackColor = System.Drawing.Color.White;
             special_TraitsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            special_TraitsLabel.Location = new System.Drawing.Point(3, 201);
+            special_TraitsLabel.Location = new System.Drawing.Point(18, 169);
             special_TraitsLabel.Name = "special_TraitsLabel";
             special_TraitsLabel.Size = new System.Drawing.Size(51, 16);
             special_TraitsLabel.TabIndex = 28;
@@ -583,7 +583,7 @@
             this.nameLabel1.BackColor = System.Drawing.Color.White;
             this.nameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Name", true));
             this.nameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.nameLabel1.Location = new System.Drawing.Point(100, 1);
+            this.nameLabel1.Location = new System.Drawing.Point(114, 3);
             this.nameLabel1.Name = "nameLabel1";
             this.nameLabel1.Size = new System.Drawing.Size(264, 43);
             this.nameLabel1.TabIndex = 5;
@@ -594,7 +594,7 @@
             // 
             this.classLabel1.BackColor = System.Drawing.Color.White;
             this.classLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Class", true));
-            this.classLabel1.Location = new System.Drawing.Point(204, 52);
+            this.classLabel1.Location = new System.Drawing.Point(218, 54);
             this.classLabel1.Name = "classLabel1";
             this.classLabel1.Size = new System.Drawing.Size(100, 23);
             this.classLabel1.TabIndex = 7;
@@ -605,7 +605,7 @@
             // 
             this.alignmentLabel1.BackColor = System.Drawing.Color.White;
             this.alignmentLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Alignment", true));
-            this.alignmentLabel1.Location = new System.Drawing.Point(204, 75);
+            this.alignmentLabel1.Location = new System.Drawing.Point(218, 77);
             this.alignmentLabel1.Name = "alignmentLabel1";
             this.alignmentLabel1.Size = new System.Drawing.Size(100, 23);
             this.alignmentLabel1.TabIndex = 9;
@@ -615,7 +615,7 @@
             // 
             this.hiring_FeeLabel1.BackColor = System.Drawing.Color.White;
             this.hiring_FeeLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Hiring Fee", true));
-            this.hiring_FeeLabel1.Location = new System.Drawing.Point(204, 98);
+            this.hiring_FeeLabel1.Location = new System.Drawing.Point(218, 100);
             this.hiring_FeeLabel1.Name = "hiring_FeeLabel1";
             this.hiring_FeeLabel1.Size = new System.Drawing.Size(100, 23);
             this.hiring_FeeLabel1.TabIndex = 11;
@@ -625,18 +625,19 @@
             // 
             this.aboutLabel1.BackColor = System.Drawing.Color.White;
             this.aboutLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "About", true));
-            this.aboutLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.aboutLabel1.Location = new System.Drawing.Point(100, 226);
+            this.aboutLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic);
+            this.aboutLabel1.Location = new System.Drawing.Point(76, 194);
             this.aboutLabel1.Name = "aboutLabel1";
-            this.aboutLabel1.Size = new System.Drawing.Size(639, 330);
+            this.aboutLabel1.Size = new System.Drawing.Size(678, 371);
             this.aboutLabel1.TabIndex = 13;
             this.aboutLabel1.Text = "label1";
+            this.aboutLabel1.Click += new System.EventHandler(this.aboutLabel1_Click);
             // 
             // strengthLabel1
             // 
             this.strengthLabel1.BackColor = System.Drawing.Color.White;
             this.strengthLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Strength", true));
-            this.strengthLabel1.Location = new System.Drawing.Point(530, 52);
+            this.strengthLabel1.Location = new System.Drawing.Point(544, 54);
             this.strengthLabel1.Name = "strengthLabel1";
             this.strengthLabel1.Size = new System.Drawing.Size(100, 23);
             this.strengthLabel1.TabIndex = 15;
@@ -646,7 +647,7 @@
             // 
             this.dexterityLabel1.BackColor = System.Drawing.Color.White;
             this.dexterityLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Dexterity", true));
-            this.dexterityLabel1.Location = new System.Drawing.Point(530, 75);
+            this.dexterityLabel1.Location = new System.Drawing.Point(544, 77);
             this.dexterityLabel1.Name = "dexterityLabel1";
             this.dexterityLabel1.Size = new System.Drawing.Size(100, 23);
             this.dexterityLabel1.TabIndex = 17;
@@ -656,7 +657,7 @@
             // 
             this.conditionLabel1.BackColor = System.Drawing.Color.White;
             this.conditionLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Condition", true));
-            this.conditionLabel1.Location = new System.Drawing.Point(530, 98);
+            this.conditionLabel1.Location = new System.Drawing.Point(544, 100);
             this.conditionLabel1.Name = "conditionLabel1";
             this.conditionLabel1.Size = new System.Drawing.Size(100, 23);
             this.conditionLabel1.TabIndex = 19;
@@ -666,7 +667,7 @@
             // 
             this.intelligenceLabel1.BackColor = System.Drawing.Color.White;
             this.intelligenceLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Intelligence", true));
-            this.intelligenceLabel1.Location = new System.Drawing.Point(530, 121);
+            this.intelligenceLabel1.Location = new System.Drawing.Point(544, 123);
             this.intelligenceLabel1.Name = "intelligenceLabel1";
             this.intelligenceLabel1.Size = new System.Drawing.Size(100, 23);
             this.intelligenceLabel1.TabIndex = 21;
@@ -676,7 +677,7 @@
             // 
             this.wisdomLabel1.BackColor = System.Drawing.Color.White;
             this.wisdomLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Wisdom", true));
-            this.wisdomLabel1.Location = new System.Drawing.Point(530, 144);
+            this.wisdomLabel1.Location = new System.Drawing.Point(544, 146);
             this.wisdomLabel1.Name = "wisdomLabel1";
             this.wisdomLabel1.Size = new System.Drawing.Size(100, 23);
             this.wisdomLabel1.TabIndex = 23;
@@ -686,7 +687,7 @@
             // 
             this.charismaLabel1.BackColor = System.Drawing.Color.White;
             this.charismaLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Charisma", true));
-            this.charismaLabel1.Location = new System.Drawing.Point(530, 167);
+            this.charismaLabel1.Location = new System.Drawing.Point(544, 169);
             this.charismaLabel1.Name = "charismaLabel1";
             this.charismaLabel1.Size = new System.Drawing.Size(100, 23);
             this.charismaLabel1.TabIndex = 25;
@@ -696,7 +697,7 @@
             // 
             this.total_ScoreLabel1.BackColor = System.Drawing.Color.White;
             this.total_ScoreLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Total Score", true));
-            this.total_ScoreLabel1.Location = new System.Drawing.Point(204, 121);
+            this.total_ScoreLabel1.Location = new System.Drawing.Point(218, 123);
             this.total_ScoreLabel1.Name = "total_ScoreLabel1";
             this.total_ScoreLabel1.Size = new System.Drawing.Size(100, 23);
             this.total_ScoreLabel1.TabIndex = 27;
@@ -707,9 +708,9 @@
             this.special_TraitsLabel1.BackColor = System.Drawing.Color.White;
             this.special_TraitsLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Special Traits", true));
             this.special_TraitsLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.special_TraitsLabel1.Location = new System.Drawing.Point(102, 198);
+            this.special_TraitsLabel1.Location = new System.Drawing.Point(79, 166);
             this.special_TraitsLabel1.Name = "special_TraitsLabel1";
-            this.special_TraitsLabel1.Size = new System.Drawing.Size(526, 23);
+            this.special_TraitsLabel1.Size = new System.Drawing.Size(363, 23);
             this.special_TraitsLabel1.TabIndex = 29;
             this.special_TraitsLabel1.Text = "label1";
             // 

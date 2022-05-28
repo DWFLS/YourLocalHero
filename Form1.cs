@@ -265,5 +265,10 @@ namespace YourLocalHero
         {
 
         }
+
+        private void aboutLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
