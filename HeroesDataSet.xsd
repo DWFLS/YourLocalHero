@@ -109,7 +109,7 @@ SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Con
               <Mapping SourceColumn="Special Traits" DataSetColumn="Special Traits" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy">
+              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT *
@@ -123,7 +123,7 @@ WHERE @NAME + '%' in (Name, Class);
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Condition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]
@@ -137,7 +137,7 @@ WHERE @NAME + '%' in (Name, Class);
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="FillBy2">
+              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy2">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT *
@@ -149,7 +149,33 @@ WHERE @NAME + '%' in (name, class)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Search" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Search" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Search">
+              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy3" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy3">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT *
+FROM heroes
+WHERE Name LIKE '%'
+OR Name LIKE '%'
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy4" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy4" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillBy4">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT *
+FROM heroes
+WHERE Name LIKE @S + '%'
+OR Name LIKE @S + '%'
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="S" ColumnName="Name" DataSourceName="[D:\DEV\YOURLOCALHERO\HEROES.MDF].dbo.heroes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@S" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Search" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Search" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="Search">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Condition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]
@@ -163,7 +189,41 @@ WHERE  (Name LIKE @Name + N'%') OR (Class LIKE @Class + N'%') OR (Alignment LIKE
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Searching" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Searching" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="Searching">
+              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchAdvanced" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchAdvanced" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="SearchAdvanced">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Condition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]
+FROM     heroes
+WHERE  (Name LIKE @Q + N'%') OR
+                  (Class LIKE @Q + N'%') OR
+                  (Alignment LIKE @Q + N'%') OR
+                  (ClassSub1 LIKE @Q + N'%') OR
+                  (ClassSub2 LIKE @Q + N'%') OR
+                  (ClassSub3 LIKE @Q + N'%') OR
+                  (AlignmentSub1 LIKE @Q + N'%') OR
+                  (AlignmentSub2 LIKE @Q + N'%')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Q" ColumnName="Name" DataSourceName="[D:\DEV\YOURLOCALHERO\HEROES.MDF].dbo.heroes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Q" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchBasic" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchBasic" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="SearchBasic">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Condition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]
+FROM     heroes
+WHERE  (Name LIKE @Q + N'%') OR
+                  (Class LIKE @Q + N'%') OR
+                  (Alignment LIKE @Q + N'%')
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Q" ColumnName="Name" DataSourceName="[D:\DEV\YOURLOCALHERO\HEROES.MDF].dbo.heroes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Q" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Searching" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Searching" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="Searching">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Condition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]
@@ -174,7 +234,7 @@ LIKE '%'</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SearchName">
+              <DbSource ConnectionRef="heroesConnectionString (Settings)" DbObjectName="dbo.heroes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SearchName" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SearchName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="SearchName">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Condition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]
@@ -193,50 +253,50 @@ WHERE  (Name LIKE @NAME + N'%')</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="HeroesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="HeroesDataSet" msprop:Generator_DataSetName="HeroesDataSet">
+  <xs:element name="HeroesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="HeroesDataSet" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HeroesDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="heroes" msprop:Generator_RowEvHandlerName="heroesRowChangeEventHandler" msprop:Generator_RowDeletedName="heroesRowDeleted" msprop:Generator_RowDeletingName="heroesRowDeleting" msprop:Generator_RowEvArgName="heroesRowChangeEvent" msprop:Generator_TablePropName="heroes" msprop:Generator_RowChangedName="heroesRowChanged" msprop:Generator_RowChangingName="heroesRowChanging" msprop:Generator_TableClassName="heroesDataTable" msprop:Generator_RowClassName="heroesRow" msprop:Generator_TableVarName="tableheroes" msprop:Generator_UserTableName="heroes">
+        <xs:element name="heroes" msprop:Generator_RowEvHandlerName="heroesRowChangeEventHandler" msprop:Generator_RowDeletedName="heroesRowDeleted" msprop:Generator_RowDeletingName="heroesRowDeleting" msprop:Generator_RowEvArgName="heroesRowChangeEvent" msprop:Generator_TablePropName="heroes" msprop:Generator_RowChangedName="heroesRowChanged" msprop:Generator_UserTableName="heroes" msprop:Generator_RowChangingName="heroesRowChanging" msprop:Generator_RowClassName="heroesRow" msprop:Generator_TableClassName="heroesDataTable" msprop:Generator_TableVarName="tableheroes">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_UserColumnName="Id" type="xs:int" />
-              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name">
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Class" msprop:Generator_ColumnPropNameInRow="Class" msprop:Generator_ColumnPropNameInTable="ClassColumn" msprop:Generator_ColumnVarNameInTable="columnClass" msprop:Generator_UserColumnName="Class">
+              <xs:element name="Class" msprop:Generator_ColumnPropNameInTable="ClassColumn" msprop:Generator_ColumnPropNameInRow="Class" msprop:Generator_UserColumnName="Class" msprop:Generator_ColumnVarNameInTable="columnClass">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Alignment" msprop:Generator_ColumnPropNameInRow="Alignment" msprop:Generator_ColumnPropNameInTable="AlignmentColumn" msprop:Generator_ColumnVarNameInTable="columnAlignment" msprop:Generator_UserColumnName="Alignment">
+              <xs:element name="Alignment" msprop:Generator_ColumnPropNameInTable="AlignmentColumn" msprop:Generator_ColumnPropNameInRow="Alignment" msprop:Generator_UserColumnName="Alignment" msprop:Generator_ColumnVarNameInTable="columnAlignment">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Hiring_x0020_Fee" msprop:Generator_ColumnPropNameInRow="Hiring_Fee" msprop:Generator_ColumnPropNameInTable="Hiring_FeeColumn" msprop:Generator_ColumnVarNameInTable="columnHiring_Fee" msprop:Generator_UserColumnName="Hiring Fee" type="xs:int" />
-              <xs:element name="About" msprop:Generator_ColumnPropNameInRow="About" msprop:Generator_ColumnPropNameInTable="AboutColumn" msprop:Generator_ColumnVarNameInTable="columnAbout" msprop:Generator_UserColumnName="About">
+              <xs:element name="Hiring_x0020_Fee" msprop:Generator_ColumnPropNameInTable="Hiring_FeeColumn" msprop:Generator_ColumnPropNameInRow="Hiring_Fee" msprop:Generator_UserColumnName="Hiring Fee" msprop:Generator_ColumnVarNameInTable="columnHiring_Fee" type="xs:int" />
+              <xs:element name="About" msprop:Generator_ColumnPropNameInTable="AboutColumn" msprop:Generator_ColumnPropNameInRow="About" msprop:Generator_UserColumnName="About" msprop:Generator_ColumnVarNameInTable="columnAbout">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1073741823" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Strength" msprop:Generator_ColumnPropNameInRow="Strength" msprop:Generator_ColumnPropNameInTable="StrengthColumn" msprop:Generator_ColumnVarNameInTable="columnStrength" msprop:Generator_UserColumnName="Strength" type="xs:decimal" />
-              <xs:element name="Dexterity" msprop:Generator_ColumnPropNameInRow="Dexterity" msprop:Generator_ColumnPropNameInTable="DexterityColumn" msprop:Generator_ColumnVarNameInTable="columnDexterity" msprop:Generator_UserColumnName="Dexterity" type="xs:int" />
-              <xs:element name="Condition" msprop:Generator_ColumnPropNameInRow="Condition" msprop:Generator_ColumnPropNameInTable="ConditionColumn" msprop:Generator_ColumnVarNameInTable="columnCondition" msprop:Generator_UserColumnName="Condition" type="xs:int" />
-              <xs:element name="Intelligence" msprop:Generator_ColumnPropNameInRow="Intelligence" msprop:Generator_ColumnPropNameInTable="IntelligenceColumn" msprop:Generator_ColumnVarNameInTable="columnIntelligence" msprop:Generator_UserColumnName="Intelligence" type="xs:int" />
-              <xs:element name="Wisdom" msprop:Generator_ColumnPropNameInRow="Wisdom" msprop:Generator_ColumnPropNameInTable="WisdomColumn" msprop:Generator_ColumnVarNameInTable="columnWisdom" msprop:Generator_UserColumnName="Wisdom" type="xs:int" />
-              <xs:element name="Charisma" msprop:Generator_ColumnPropNameInRow="Charisma" msprop:Generator_ColumnPropNameInTable="CharismaColumn" msprop:Generator_ColumnVarNameInTable="columnCharisma" msprop:Generator_UserColumnName="Charisma" type="xs:int" />
-              <xs:element name="Total_x0020_Score" msprop:Generator_ColumnPropNameInRow="Total_Score" msprop:Generator_ColumnPropNameInTable="Total_ScoreColumn" msprop:Generator_ColumnVarNameInTable="columnTotal_Score" msprop:Generator_UserColumnName="Total Score" type="xs:int" />
-              <xs:element name="Special_x0020_Traits" msprop:Generator_ColumnPropNameInRow="Special_Traits" msprop:Generator_ColumnPropNameInTable="Special_TraitsColumn" msprop:Generator_ColumnVarNameInTable="columnSpecial_Traits" msprop:Generator_UserColumnName="Special Traits" minOccurs="0">
+              <xs:element name="Strength" msprop:Generator_ColumnPropNameInTable="StrengthColumn" msprop:Generator_ColumnPropNameInRow="Strength" msprop:Generator_UserColumnName="Strength" msprop:Generator_ColumnVarNameInTable="columnStrength" type="xs:decimal" />
+              <xs:element name="Dexterity" msprop:Generator_ColumnPropNameInTable="DexterityColumn" msprop:Generator_ColumnPropNameInRow="Dexterity" msprop:Generator_UserColumnName="Dexterity" msprop:Generator_ColumnVarNameInTable="columnDexterity" type="xs:int" />
+              <xs:element name="Condition" msprop:Generator_ColumnPropNameInTable="ConditionColumn" msprop:Generator_ColumnPropNameInRow="Condition" msprop:Generator_UserColumnName="Condition" msprop:Generator_ColumnVarNameInTable="columnCondition" type="xs:int" />
+              <xs:element name="Intelligence" msprop:Generator_ColumnPropNameInTable="IntelligenceColumn" msprop:Generator_ColumnPropNameInRow="Intelligence" msprop:Generator_UserColumnName="Intelligence" msprop:Generator_ColumnVarNameInTable="columnIntelligence" type="xs:int" />
+              <xs:element name="Wisdom" msprop:Generator_ColumnPropNameInTable="WisdomColumn" msprop:Generator_ColumnPropNameInRow="Wisdom" msprop:Generator_UserColumnName="Wisdom" msprop:Generator_ColumnVarNameInTable="columnWisdom" type="xs:int" />
+              <xs:element name="Charisma" msprop:Generator_ColumnPropNameInTable="CharismaColumn" msprop:Generator_ColumnPropNameInRow="Charisma" msprop:Generator_UserColumnName="Charisma" msprop:Generator_ColumnVarNameInTable="columnCharisma" type="xs:int" />
+              <xs:element name="Total_x0020_Score" msprop:Generator_ColumnPropNameInTable="Total_ScoreColumn" msprop:Generator_ColumnPropNameInRow="Total_Score" msprop:Generator_UserColumnName="Total Score" msprop:Generator_ColumnVarNameInTable="columnTotal_Score" type="xs:int" />
+              <xs:element name="Special_x0020_Traits" msprop:Generator_ColumnPropNameInTable="Special_TraitsColumn" msprop:Generator_ColumnPropNameInRow="Special_Traits" msprop:Generator_UserColumnName="Special Traits" msprop:Generator_ColumnVarNameInTable="columnSpecial_Traits" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1073741823" />

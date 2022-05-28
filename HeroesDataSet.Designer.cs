@@ -1170,7 +1170,7 @@ SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Con
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[11];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Cond" +
@@ -1196,26 +1196,59 @@ SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Con
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NAME", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = @"SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Condition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]
-FROM     heroes
-WHERE  (Name LIKE @Name + N'%') OR (Class LIKE @Class + N'%') OR (Alignment LIKE @Alignment + N'%')";
+            this._commandCollection[4].CommandText = "SELECT *\r\nFROM heroes\r\nWHERE Name LIKE \'%\'\r\nOR Name LIKE \'%\'\r\n";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Class", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Class", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alignment", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Alignment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Cond" +
-                "ition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]\r\nFROM    " +
-                " heroes\r\nWHERE CONCAT_WS (\' \', Name, Class, Alignment) \r\nLIKE \'%\'";
+            this._commandCollection[5].CommandText = "SELECT *\r\nFROM heroes\r\nWHERE Name LIKE @S + \'%\'\r\nOR Name LIKE @S + \'%\'\r\n";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@S", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = "SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Cond" +
+            this._commandCollection[6].CommandText = @"SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Condition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]
+FROM     heroes
+WHERE  (Name LIKE @Name + N'%') OR (Class LIKE @Class + N'%') OR (Alignment LIKE @Alignment + N'%')";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Class", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Class", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alignment", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Alignment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = @"SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Condition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]
+FROM     heroes
+WHERE  (Name LIKE @Q + N'%') OR
+                  (Class LIKE @Q + N'%') OR
+                  (Alignment LIKE @Q + N'%') OR
+                  (ClassSub1 LIKE @Q + N'%') OR
+                  (ClassSub2 LIKE @Q + N'%') OR
+                  (ClassSub3 LIKE @Q + N'%') OR
+                  (AlignmentSub1 LIKE @Q + N'%') OR
+                  (AlignmentSub2 LIKE @Q + N'%')";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Q", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[8].Connection = this.Connection;
+            this._commandCollection[8].CommandText = @"SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Condition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]
+FROM     heroes
+WHERE  (Name LIKE @Q + N'%') OR
+                  (Class LIKE @Q + N'%') OR
+                  (Alignment LIKE @Q + N'%')
+";
+            this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Q", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = "SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Cond" +
+                "ition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]\r\nFROM    " +
+                " heroes\r\nWHERE CONCAT_WS (\' \', Name, Class, Alignment) \r\nLIKE \'%\'";
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[10].Connection = this.Connection;
+            this._commandCollection[10].CommandText = "SELECT Id, Name, Class, Alignment, [Hiring Fee], About, Strength, Dexterity, Cond" +
                 "ition, Intelligence, Wisdom, Charisma, [Total Score], [Special Traits]\r\nFROM    " +
                 " heroes\r\nWHERE  (Name LIKE @NAME + N\'%\')";
-            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NAME", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NAME", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1303,8 +1336,40 @@ WHERE  (Name LIKE @Name + N'%') OR (Class LIKE @Class + N'%') OR (Alignment LIKE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int Search(HeroesDataSet.heroesDataTable dataTable, string Name, string Class, string Alignment) {
+        public virtual int FillBy3(HeroesDataSet.heroesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy4(HeroesDataSet.heroesDataTable dataTable, string S) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            if ((S == null)) {
+                throw new global::System.ArgumentNullException("S");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(S));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int Search(HeroesDataSet.heroesDataTable dataTable, string Name, string Class, string Alignment) {
+            this.Adapter.SelectCommand = this.CommandCollection[6];
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
@@ -1334,8 +1399,46 @@ WHERE  (Name LIKE @Name + N'%') OR (Class LIKE @Class + N'%') OR (Alignment LIKE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int SearchAdvanced(HeroesDataSet.heroesDataTable dataTable, string Q) {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
+            if ((Q == null)) {
+                throw new global::System.ArgumentNullException("Q");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Q));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int SearchBasic(HeroesDataSet.heroesDataTable dataTable, string Q) {
+            this.Adapter.SelectCommand = this.CommandCollection[8];
+            if ((Q == null)) {
+                throw new global::System.ArgumentNullException("Q");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Q));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int Searching(HeroesDataSet.heroesDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[5];
+            this.Adapter.SelectCommand = this.CommandCollection[9];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1348,7 +1451,7 @@ WHERE  (Name LIKE @Name + N'%') OR (Class LIKE @Class + N'%') OR (Alignment LIKE
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int SearchName(HeroesDataSet.heroesDataTable dataTable, string NAME) {
-            this.Adapter.SelectCommand = this.CommandCollection[6];
+            this.Adapter.SelectCommand = this.CommandCollection[10];
             if ((NAME == null)) {
                 throw new global::System.ArgumentNullException("NAME");
             }

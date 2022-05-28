@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label classLabel;
             System.Windows.Forms.Label alignmentLabel;
@@ -43,38 +42,24 @@
             System.Windows.Forms.Label charismaLabel;
             System.Windows.Forms.Label total_ScoreLabel;
             System.Windows.Forms.Label special_TraitsLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ylhLogo = new System.Windows.Forms.PictureBox();
-            this.heroesDataSet = new YourLocalHero.HeroesDataSet();
-            this.heroesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.heroesTableAdapter = new YourLocalHero.HeroesDataSetTableAdapters.heroesTableAdapter();
-            this.tableAdapterManager = new YourLocalHero.HeroesDataSetTableAdapters.TableAdapterManager();
             this.heroesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.heroesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.heroesDataSet = new YourLocalHero.HeroesDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.heroesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.heroesDataGridView = new System.Windows.Forms.DataGridView();
-            this.nameLabel1 = new System.Windows.Forms.Label();
-            this.classLabel1 = new System.Windows.Forms.Label();
-            this.alignmentLabel1 = new System.Windows.Forms.Label();
-            this.hiring_FeeLabel1 = new System.Windows.Forms.Label();
-            this.aboutLabel1 = new System.Windows.Forms.Label();
-            this.strengthLabel1 = new System.Windows.Forms.Label();
-            this.dexterityLabel1 = new System.Windows.Forms.Label();
-            this.conditionLabel1 = new System.Windows.Forms.Label();
-            this.intelligenceLabel1 = new System.Windows.Forms.Label();
-            this.wisdomLabel1 = new System.Windows.Forms.Label();
-            this.charismaLabel1 = new System.Windows.Forms.Label();
-            this.total_ScoreLabel1 = new System.Windows.Forms.Label();
-            this.special_TraitsLabel1 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,10 +74,38 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.version = new System.Windows.Forms.Label();
-            this.invButton = new System.Windows.Forms.Button();
+            this.nameLabel1 = new System.Windows.Forms.Label();
+            this.classLabel1 = new System.Windows.Forms.Label();
+            this.alignmentLabel1 = new System.Windows.Forms.Label();
+            this.hiring_FeeLabel1 = new System.Windows.Forms.Label();
+            this.aboutLabel1 = new System.Windows.Forms.Label();
+            this.strengthLabel1 = new System.Windows.Forms.Label();
+            this.dexterityLabel1 = new System.Windows.Forms.Label();
+            this.conditionLabel1 = new System.Windows.Forms.Label();
+            this.intelligenceLabel1 = new System.Windows.Forms.Label();
+            this.wisdomLabel1 = new System.Windows.Forms.Label();
+            this.charismaLabel1 = new System.Windows.Forms.Label();
+            this.total_ScoreLabel1 = new System.Windows.Forms.Label();
+            this.special_TraitsLabel1 = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchBasicToolStrip = new System.Windows.Forms.ToolStrip();
+            this.qToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.qToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.searchBasicToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblSearchResultNumber = new System.Windows.Forms.Label();
+            this.panelResultDetails = new System.Windows.Forms.Panel();
+            this.searchAdvancedToolStrip = new System.Windows.Forms.ToolStrip();
+            this.qToolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.qToolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.searchAdvancedToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.heroesTableAdapter = new YourLocalHero.HeroesDataSetTableAdapters.heroesTableAdapter();
+            this.tableAdapterManager = new YourLocalHero.HeroesDataSetTableAdapters.TableAdapterManager();
+            this.searchPanel = new System.Windows.Forms.Panel();
+            this.lblHints = new System.Windows.Forms.Label();
+            this.pictureBoxBG = new System.Windows.Forms.PictureBox();
+            this.lblVersion = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             classLabel = new System.Windows.Forms.Label();
             alignmentLabel = new System.Windows.Forms.Label();
@@ -107,44 +120,174 @@
             total_ScoreLabel = new System.Windows.Forms.Label();
             special_TraitsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ylhLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heroesDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heroesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heroesBindingNavigator)).BeginInit();
             this.heroesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.heroesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heroesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heroesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.searchBasicToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelResultDetails.SuspendLayout();
+            this.searchAdvancedToolStrip.SuspendLayout();
+            this.searchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             this.SuspendLayout();
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.BackColor = System.Drawing.Color.White;
+            nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            nameLabel.Location = new System.Drawing.Point(3, 25);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(52, 16);
+            nameLabel.TabIndex = 4;
+            nameLabel.Text = "Name:";
+            // 
+            // classLabel
+            // 
+            classLabel.AutoSize = true;
+            classLabel.BackColor = System.Drawing.Color.White;
+            classLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            classLabel.Location = new System.Drawing.Point(105, 52);
+            classLabel.Name = "classLabel";
+            classLabel.Size = new System.Drawing.Size(50, 16);
+            classLabel.TabIndex = 6;
+            classLabel.Text = "Class:";
+            // 
+            // alignmentLabel
+            // 
+            alignmentLabel.AutoSize = true;
+            alignmentLabel.BackColor = System.Drawing.Color.White;
+            alignmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            alignmentLabel.Location = new System.Drawing.Point(105, 75);
+            alignmentLabel.Name = "alignmentLabel";
+            alignmentLabel.Size = new System.Drawing.Size(79, 16);
+            alignmentLabel.TabIndex = 8;
+            alignmentLabel.Text = "Alignment:";
+            // 
+            // hiring_FeeLabel
+            // 
+            hiring_FeeLabel.AutoSize = true;
+            hiring_FeeLabel.BackColor = System.Drawing.Color.White;
+            hiring_FeeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            hiring_FeeLabel.Location = new System.Drawing.Point(105, 98);
+            hiring_FeeLabel.Name = "hiring_FeeLabel";
+            hiring_FeeLabel.Size = new System.Drawing.Size(83, 16);
+            hiring_FeeLabel.TabIndex = 10;
+            hiring_FeeLabel.Text = "Hiring Fee:";
+            // 
+            // aboutLabel
+            // 
+            aboutLabel.AutoSize = true;
+            aboutLabel.BackColor = System.Drawing.Color.White;
+            aboutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            aboutLabel.Location = new System.Drawing.Point(3, 229);
+            aboutLabel.Name = "aboutLabel";
+            aboutLabel.Size = new System.Drawing.Size(51, 16);
+            aboutLabel.TabIndex = 12;
+            aboutLabel.Text = "About:";
+            // 
+            // strengthLabel
+            // 
+            strengthLabel.AutoSize = true;
+            strengthLabel.BackColor = System.Drawing.Color.White;
+            strengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            strengthLabel.Location = new System.Drawing.Point(431, 52);
+            strengthLabel.Name = "strengthLabel";
+            strengthLabel.Size = new System.Drawing.Size(68, 16);
+            strengthLabel.TabIndex = 14;
+            strengthLabel.Text = "Strength:";
+            // 
+            // dexterityLabel
+            // 
+            dexterityLabel.AutoSize = true;
+            dexterityLabel.BackColor = System.Drawing.Color.White;
+            dexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dexterityLabel.Location = new System.Drawing.Point(431, 75);
+            dexterityLabel.Name = "dexterityLabel";
+            dexterityLabel.Size = new System.Drawing.Size(72, 16);
+            dexterityLabel.TabIndex = 16;
+            dexterityLabel.Text = "Dexterity:";
+            // 
+            // conditionLabel
+            // 
+            conditionLabel.AutoSize = true;
+            conditionLabel.BackColor = System.Drawing.Color.White;
+            conditionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            conditionLabel.Location = new System.Drawing.Point(431, 98);
+            conditionLabel.Name = "conditionLabel";
+            conditionLabel.Size = new System.Drawing.Size(76, 16);
+            conditionLabel.TabIndex = 18;
+            conditionLabel.Text = "Condition:";
+            // 
+            // intelligenceLabel
+            // 
+            intelligenceLabel.AutoSize = true;
+            intelligenceLabel.BackColor = System.Drawing.Color.White;
+            intelligenceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            intelligenceLabel.Location = new System.Drawing.Point(431, 121);
+            intelligenceLabel.Name = "intelligenceLabel";
+            intelligenceLabel.Size = new System.Drawing.Size(91, 16);
+            intelligenceLabel.TabIndex = 20;
+            intelligenceLabel.Text = "Intelligence:";
+            // 
+            // wisdomLabel
+            // 
+            wisdomLabel.AutoSize = true;
+            wisdomLabel.BackColor = System.Drawing.Color.White;
+            wisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            wisdomLabel.Location = new System.Drawing.Point(431, 144);
+            wisdomLabel.Name = "wisdomLabel";
+            wisdomLabel.Size = new System.Drawing.Size(67, 16);
+            wisdomLabel.TabIndex = 22;
+            wisdomLabel.Text = "Wisdom:";
+            // 
+            // charismaLabel
+            // 
+            charismaLabel.AutoSize = true;
+            charismaLabel.BackColor = System.Drawing.Color.White;
+            charismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            charismaLabel.Location = new System.Drawing.Point(431, 167);
+            charismaLabel.Name = "charismaLabel";
+            charismaLabel.Size = new System.Drawing.Size(76, 16);
+            charismaLabel.TabIndex = 24;
+            charismaLabel.Text = "Charisma:";
+            // 
+            // total_ScoreLabel
+            // 
+            total_ScoreLabel.AutoSize = true;
+            total_ScoreLabel.BackColor = System.Drawing.Color.White;
+            total_ScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            total_ScoreLabel.Location = new System.Drawing.Point(105, 121);
+            total_ScoreLabel.Name = "total_ScoreLabel";
+            total_ScoreLabel.Size = new System.Drawing.Size(92, 16);
+            total_ScoreLabel.TabIndex = 26;
+            total_ScoreLabel.Text = "Total Score:";
+            // 
+            // special_TraitsLabel
+            // 
+            special_TraitsLabel.AutoSize = true;
+            special_TraitsLabel.BackColor = System.Drawing.Color.White;
+            special_TraitsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            special_TraitsLabel.Location = new System.Drawing.Point(3, 201);
+            special_TraitsLabel.Name = "special_TraitsLabel";
+            special_TraitsLabel.Size = new System.Drawing.Size(51, 16);
+            special_TraitsLabel.TabIndex = 28;
+            special_TraitsLabel.Text = "Traits:";
             // 
             // ylhLogo
             // 
+            this.ylhLogo.BackColor = System.Drawing.Color.Black;
+            this.ylhLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ylhLogo.Image = ((System.Drawing.Image)(resources.GetObject("ylhLogo.Image")));
             this.ylhLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("ylhLogo.InitialImage")));
-            this.ylhLogo.Location = new System.Drawing.Point(12, 62);
+            this.ylhLogo.Location = new System.Drawing.Point(12, 12);
             this.ylhLogo.Name = "ylhLogo";
             this.ylhLogo.Size = new System.Drawing.Size(1523, 113);
             this.ylhLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ylhLogo.TabIndex = 0;
             this.ylhLogo.TabStop = false;
-            // 
-            // heroesDataSet
-            // 
-            this.heroesDataSet.DataSetName = "HeroesDataSet";
-            this.heroesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // heroesBindingSource
-            // 
-            this.heroesBindingSource.DataMember = "heroes";
-            this.heroesBindingSource.DataSource = this.heroesDataSet;
-            // 
-            // heroesTableAdapter
-            // 
-            this.heroesTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.heroesTableAdapter = this.heroesTableAdapter;
-            this.tableAdapterManager.UpdateOrder = YourLocalHero.HeroesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // heroesBindingNavigator
             // 
@@ -177,6 +320,41 @@
             this.heroesBindingNavigator.TabIndex = 2;
             this.heroesBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // heroesBindingSource
+            // 
+            this.heroesBindingSource.DataMember = "heroes";
+            this.heroesBindingSource.DataSource = this.heroesDataSet;
+            // 
+            // heroesDataSet
+            // 
+            this.heroesDataSet.DataSetName = "HeroesDataSet";
+            this.heroesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -204,21 +382,15 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -241,26 +413,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // heroesBindingNavigatorSaveItem
             // 
@@ -295,288 +449,13 @@
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14});
             this.heroesDataGridView.DataSource = this.heroesBindingSource;
-            this.heroesDataGridView.Location = new System.Drawing.Point(796, 260);
+            this.heroesDataGridView.Location = new System.Drawing.Point(804, 236);
             this.heroesDataGridView.Name = "heroesDataGridView";
             this.heroesDataGridView.ReadOnly = true;
             this.heroesDataGridView.RowHeadersWidth = 51;
             this.heroesDataGridView.RowTemplate.Height = 24;
-            this.heroesDataGridView.Size = new System.Drawing.Size(739, 578);
+            this.heroesDataGridView.Size = new System.Drawing.Size(739, 576);
             this.heroesDataGridView.TabIndex = 3;
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.BackColor = System.Drawing.Color.White;
-            nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            nameLabel.Location = new System.Drawing.Point(36, 287);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(52, 16);
-            nameLabel.TabIndex = 4;
-            nameLabel.Text = "Name:";
-            // 
-            // nameLabel1
-            // 
-            this.nameLabel1.BackColor = System.Drawing.Color.White;
-            this.nameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Name", true));
-            this.nameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.nameLabel1.Location = new System.Drawing.Point(132, 260);
-            this.nameLabel1.Name = "nameLabel1";
-            this.nameLabel1.Size = new System.Drawing.Size(264, 43);
-            this.nameLabel1.TabIndex = 5;
-            this.nameLabel1.Text = "label1";
-            this.nameLabel1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // classLabel
-            // 
-            classLabel.AutoSize = true;
-            classLabel.BackColor = System.Drawing.Color.White;
-            classLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            classLabel.Location = new System.Drawing.Point(36, 311);
-            classLabel.Name = "classLabel";
-            classLabel.Size = new System.Drawing.Size(50, 16);
-            classLabel.TabIndex = 6;
-            classLabel.Text = "Class:";
-            // 
-            // classLabel1
-            // 
-            this.classLabel1.BackColor = System.Drawing.Color.White;
-            this.classLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Class", true));
-            this.classLabel1.Location = new System.Drawing.Point(135, 311);
-            this.classLabel1.Name = "classLabel1";
-            this.classLabel1.Size = new System.Drawing.Size(100, 23);
-            this.classLabel1.TabIndex = 7;
-            this.classLabel1.Text = "label1";
-            // 
-            // alignmentLabel
-            // 
-            alignmentLabel.AutoSize = true;
-            alignmentLabel.BackColor = System.Drawing.Color.White;
-            alignmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            alignmentLabel.Location = new System.Drawing.Point(36, 334);
-            alignmentLabel.Name = "alignmentLabel";
-            alignmentLabel.Size = new System.Drawing.Size(79, 16);
-            alignmentLabel.TabIndex = 8;
-            alignmentLabel.Text = "Alignment:";
-            // 
-            // alignmentLabel1
-            // 
-            this.alignmentLabel1.BackColor = System.Drawing.Color.White;
-            this.alignmentLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Alignment", true));
-            this.alignmentLabel1.Location = new System.Drawing.Point(135, 334);
-            this.alignmentLabel1.Name = "alignmentLabel1";
-            this.alignmentLabel1.Size = new System.Drawing.Size(100, 23);
-            this.alignmentLabel1.TabIndex = 9;
-            this.alignmentLabel1.Text = "label1";
-            // 
-            // hiring_FeeLabel
-            // 
-            hiring_FeeLabel.AutoSize = true;
-            hiring_FeeLabel.BackColor = System.Drawing.Color.White;
-            hiring_FeeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            hiring_FeeLabel.Location = new System.Drawing.Point(36, 357);
-            hiring_FeeLabel.Name = "hiring_FeeLabel";
-            hiring_FeeLabel.Size = new System.Drawing.Size(83, 16);
-            hiring_FeeLabel.TabIndex = 10;
-            hiring_FeeLabel.Text = "Hiring Fee:";
-            // 
-            // hiring_FeeLabel1
-            // 
-            this.hiring_FeeLabel1.BackColor = System.Drawing.Color.White;
-            this.hiring_FeeLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Hiring Fee", true));
-            this.hiring_FeeLabel1.Location = new System.Drawing.Point(135, 357);
-            this.hiring_FeeLabel1.Name = "hiring_FeeLabel1";
-            this.hiring_FeeLabel1.Size = new System.Drawing.Size(100, 23);
-            this.hiring_FeeLabel1.TabIndex = 11;
-            this.hiring_FeeLabel1.Text = "label1";
-            // 
-            // aboutLabel
-            // 
-            aboutLabel.AutoSize = true;
-            aboutLabel.BackColor = System.Drawing.Color.White;
-            aboutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            aboutLabel.Location = new System.Drawing.Point(36, 485);
-            aboutLabel.Name = "aboutLabel";
-            aboutLabel.Size = new System.Drawing.Size(51, 16);
-            aboutLabel.TabIndex = 12;
-            aboutLabel.Text = "About:";
-            // 
-            // aboutLabel1
-            // 
-            this.aboutLabel1.BackColor = System.Drawing.Color.White;
-            this.aboutLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "About", true));
-            this.aboutLabel1.Location = new System.Drawing.Point(135, 485);
-            this.aboutLabel1.Name = "aboutLabel1";
-            this.aboutLabel1.Size = new System.Drawing.Size(526, 333);
-            this.aboutLabel1.TabIndex = 13;
-            this.aboutLabel1.Text = "label1";
-            // 
-            // strengthLabel
-            // 
-            strengthLabel.AutoSize = true;
-            strengthLabel.BackColor = System.Drawing.Color.White;
-            strengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            strengthLabel.Location = new System.Drawing.Point(251, 311);
-            strengthLabel.Name = "strengthLabel";
-            strengthLabel.Size = new System.Drawing.Size(68, 16);
-            strengthLabel.TabIndex = 14;
-            strengthLabel.Text = "Strength:";
-            // 
-            // strengthLabel1
-            // 
-            this.strengthLabel1.BackColor = System.Drawing.Color.White;
-            this.strengthLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Strength", true));
-            this.strengthLabel1.Location = new System.Drawing.Point(350, 311);
-            this.strengthLabel1.Name = "strengthLabel1";
-            this.strengthLabel1.Size = new System.Drawing.Size(100, 23);
-            this.strengthLabel1.TabIndex = 15;
-            this.strengthLabel1.Text = "label1";
-            // 
-            // dexterityLabel
-            // 
-            dexterityLabel.AutoSize = true;
-            dexterityLabel.BackColor = System.Drawing.Color.White;
-            dexterityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dexterityLabel.Location = new System.Drawing.Point(251, 334);
-            dexterityLabel.Name = "dexterityLabel";
-            dexterityLabel.Size = new System.Drawing.Size(72, 16);
-            dexterityLabel.TabIndex = 16;
-            dexterityLabel.Text = "Dexterity:";
-            // 
-            // dexterityLabel1
-            // 
-            this.dexterityLabel1.BackColor = System.Drawing.Color.White;
-            this.dexterityLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Dexterity", true));
-            this.dexterityLabel1.Location = new System.Drawing.Point(350, 334);
-            this.dexterityLabel1.Name = "dexterityLabel1";
-            this.dexterityLabel1.Size = new System.Drawing.Size(100, 23);
-            this.dexterityLabel1.TabIndex = 17;
-            this.dexterityLabel1.Text = "label1";
-            // 
-            // conditionLabel
-            // 
-            conditionLabel.AutoSize = true;
-            conditionLabel.BackColor = System.Drawing.Color.White;
-            conditionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            conditionLabel.Location = new System.Drawing.Point(251, 357);
-            conditionLabel.Name = "conditionLabel";
-            conditionLabel.Size = new System.Drawing.Size(76, 16);
-            conditionLabel.TabIndex = 18;
-            conditionLabel.Text = "Condition:";
-            // 
-            // conditionLabel1
-            // 
-            this.conditionLabel1.BackColor = System.Drawing.Color.White;
-            this.conditionLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Condition", true));
-            this.conditionLabel1.Location = new System.Drawing.Point(350, 357);
-            this.conditionLabel1.Name = "conditionLabel1";
-            this.conditionLabel1.Size = new System.Drawing.Size(100, 23);
-            this.conditionLabel1.TabIndex = 19;
-            this.conditionLabel1.Text = "label1";
-            // 
-            // intelligenceLabel
-            // 
-            intelligenceLabel.AutoSize = true;
-            intelligenceLabel.BackColor = System.Drawing.Color.White;
-            intelligenceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            intelligenceLabel.Location = new System.Drawing.Point(251, 380);
-            intelligenceLabel.Name = "intelligenceLabel";
-            intelligenceLabel.Size = new System.Drawing.Size(91, 16);
-            intelligenceLabel.TabIndex = 20;
-            intelligenceLabel.Text = "Intelligence:";
-            // 
-            // intelligenceLabel1
-            // 
-            this.intelligenceLabel1.BackColor = System.Drawing.Color.White;
-            this.intelligenceLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Intelligence", true));
-            this.intelligenceLabel1.Location = new System.Drawing.Point(350, 380);
-            this.intelligenceLabel1.Name = "intelligenceLabel1";
-            this.intelligenceLabel1.Size = new System.Drawing.Size(100, 23);
-            this.intelligenceLabel1.TabIndex = 21;
-            this.intelligenceLabel1.Text = "label1";
-            // 
-            // wisdomLabel
-            // 
-            wisdomLabel.AutoSize = true;
-            wisdomLabel.BackColor = System.Drawing.Color.White;
-            wisdomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            wisdomLabel.Location = new System.Drawing.Point(251, 403);
-            wisdomLabel.Name = "wisdomLabel";
-            wisdomLabel.Size = new System.Drawing.Size(67, 16);
-            wisdomLabel.TabIndex = 22;
-            wisdomLabel.Text = "Wisdom:";
-            // 
-            // wisdomLabel1
-            // 
-            this.wisdomLabel1.BackColor = System.Drawing.Color.White;
-            this.wisdomLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Wisdom", true));
-            this.wisdomLabel1.Location = new System.Drawing.Point(350, 403);
-            this.wisdomLabel1.Name = "wisdomLabel1";
-            this.wisdomLabel1.Size = new System.Drawing.Size(100, 23);
-            this.wisdomLabel1.TabIndex = 23;
-            this.wisdomLabel1.Text = "label1";
-            // 
-            // charismaLabel
-            // 
-            charismaLabel.AutoSize = true;
-            charismaLabel.BackColor = System.Drawing.Color.White;
-            charismaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            charismaLabel.Location = new System.Drawing.Point(251, 426);
-            charismaLabel.Name = "charismaLabel";
-            charismaLabel.Size = new System.Drawing.Size(76, 16);
-            charismaLabel.TabIndex = 24;
-            charismaLabel.Text = "Charisma:";
-            // 
-            // charismaLabel1
-            // 
-            this.charismaLabel1.BackColor = System.Drawing.Color.White;
-            this.charismaLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Charisma", true));
-            this.charismaLabel1.Location = new System.Drawing.Point(350, 426);
-            this.charismaLabel1.Name = "charismaLabel1";
-            this.charismaLabel1.Size = new System.Drawing.Size(100, 23);
-            this.charismaLabel1.TabIndex = 25;
-            this.charismaLabel1.Text = "label1";
-            // 
-            // total_ScoreLabel
-            // 
-            total_ScoreLabel.AutoSize = true;
-            total_ScoreLabel.BackColor = System.Drawing.Color.White;
-            total_ScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            total_ScoreLabel.Location = new System.Drawing.Point(36, 380);
-            total_ScoreLabel.Name = "total_ScoreLabel";
-            total_ScoreLabel.Size = new System.Drawing.Size(92, 16);
-            total_ScoreLabel.TabIndex = 26;
-            total_ScoreLabel.Text = "Total Score:";
-            // 
-            // total_ScoreLabel1
-            // 
-            this.total_ScoreLabel1.BackColor = System.Drawing.Color.White;
-            this.total_ScoreLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Total Score", true));
-            this.total_ScoreLabel1.Location = new System.Drawing.Point(135, 380);
-            this.total_ScoreLabel1.Name = "total_ScoreLabel1";
-            this.total_ScoreLabel1.Size = new System.Drawing.Size(100, 23);
-            this.total_ScoreLabel1.TabIndex = 27;
-            this.total_ScoreLabel1.Text = "label1";
-            // 
-            // special_TraitsLabel
-            // 
-            special_TraitsLabel.AutoSize = true;
-            special_TraitsLabel.BackColor = System.Drawing.Color.White;
-            special_TraitsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            special_TraitsLabel.Location = new System.Drawing.Point(36, 457);
-            special_TraitsLabel.Name = "special_TraitsLabel";
-            special_TraitsLabel.Size = new System.Drawing.Size(51, 16);
-            special_TraitsLabel.TabIndex = 28;
-            special_TraitsLabel.Text = "Traits:";
-            // 
-            // special_TraitsLabel1
-            // 
-            this.special_TraitsLabel1.BackColor = System.Drawing.Color.White;
-            this.special_TraitsLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Special Traits", true));
-            this.special_TraitsLabel1.Location = new System.Drawing.Point(135, 457);
-            this.special_TraitsLabel1.Name = "special_TraitsLabel1";
-            this.special_TraitsLabel1.Size = new System.Drawing.Size(526, 23);
-            this.special_TraitsLabel1.TabIndex = 29;
-            this.special_TraitsLabel1.Text = "label1";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -697,96 +576,369 @@
             this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Visible = false;
             // 
-            // version
+            // nameLabel1
             // 
-            this.version.AutoSize = true;
-            this.version.Location = new System.Drawing.Point(1164, 192);
-            this.version.Name = "version";
-            this.version.Size = new System.Drawing.Size(34, 16);
-            this.version.TabIndex = 30;
-            this.version.Text = "v 1.0";
+            this.nameLabel1.BackColor = System.Drawing.Color.White;
+            this.nameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Name", true));
+            this.nameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nameLabel1.Location = new System.Drawing.Point(100, 1);
+            this.nameLabel1.Name = "nameLabel1";
+            this.nameLabel1.Size = new System.Drawing.Size(264, 43);
+            this.nameLabel1.TabIndex = 5;
+            this.nameLabel1.Text = "label1";
+            this.nameLabel1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // invButton
+            // classLabel1
             // 
-            this.invButton.BackColor = System.Drawing.SystemColors.Window;
-            this.invButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.invButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.invButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.invButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.invButton.Location = new System.Drawing.Point(393, 195);
-            this.invButton.Name = "invButton";
-            this.invButton.Size = new System.Drawing.Size(765, 41);
-            this.invButton.TabIndex = 31;
-            this.invButton.Text = "Search here for a hero in our local database!";
-            this.invButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.invButton.UseVisualStyleBackColor = false;
-            this.invButton.Click += new System.EventHandler(this.invButton_Click);
+            this.classLabel1.BackColor = System.Drawing.Color.White;
+            this.classLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Class", true));
+            this.classLabel1.Location = new System.Drawing.Point(204, 52);
+            this.classLabel1.Name = "classLabel1";
+            this.classLabel1.Size = new System.Drawing.Size(100, 23);
+            this.classLabel1.TabIndex = 7;
+            this.classLabel1.Text = "label1";
+            this.classLabel1.Click += new System.EventHandler(this.classLabel1_Click);
+            // 
+            // alignmentLabel1
+            // 
+            this.alignmentLabel1.BackColor = System.Drawing.Color.White;
+            this.alignmentLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Alignment", true));
+            this.alignmentLabel1.Location = new System.Drawing.Point(204, 75);
+            this.alignmentLabel1.Name = "alignmentLabel1";
+            this.alignmentLabel1.Size = new System.Drawing.Size(100, 23);
+            this.alignmentLabel1.TabIndex = 9;
+            this.alignmentLabel1.Text = "label1";
+            // 
+            // hiring_FeeLabel1
+            // 
+            this.hiring_FeeLabel1.BackColor = System.Drawing.Color.White;
+            this.hiring_FeeLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Hiring Fee", true));
+            this.hiring_FeeLabel1.Location = new System.Drawing.Point(204, 98);
+            this.hiring_FeeLabel1.Name = "hiring_FeeLabel1";
+            this.hiring_FeeLabel1.Size = new System.Drawing.Size(100, 23);
+            this.hiring_FeeLabel1.TabIndex = 11;
+            this.hiring_FeeLabel1.Text = "label1";
+            // 
+            // aboutLabel1
+            // 
+            this.aboutLabel1.BackColor = System.Drawing.Color.White;
+            this.aboutLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "About", true));
+            this.aboutLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.aboutLabel1.Location = new System.Drawing.Point(100, 226);
+            this.aboutLabel1.Name = "aboutLabel1";
+            this.aboutLabel1.Size = new System.Drawing.Size(639, 330);
+            this.aboutLabel1.TabIndex = 13;
+            this.aboutLabel1.Text = "label1";
+            // 
+            // strengthLabel1
+            // 
+            this.strengthLabel1.BackColor = System.Drawing.Color.White;
+            this.strengthLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Strength", true));
+            this.strengthLabel1.Location = new System.Drawing.Point(530, 52);
+            this.strengthLabel1.Name = "strengthLabel1";
+            this.strengthLabel1.Size = new System.Drawing.Size(100, 23);
+            this.strengthLabel1.TabIndex = 15;
+            this.strengthLabel1.Text = "label1";
+            // 
+            // dexterityLabel1
+            // 
+            this.dexterityLabel1.BackColor = System.Drawing.Color.White;
+            this.dexterityLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Dexterity", true));
+            this.dexterityLabel1.Location = new System.Drawing.Point(530, 75);
+            this.dexterityLabel1.Name = "dexterityLabel1";
+            this.dexterityLabel1.Size = new System.Drawing.Size(100, 23);
+            this.dexterityLabel1.TabIndex = 17;
+            this.dexterityLabel1.Text = "label1";
+            // 
+            // conditionLabel1
+            // 
+            this.conditionLabel1.BackColor = System.Drawing.Color.White;
+            this.conditionLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Condition", true));
+            this.conditionLabel1.Location = new System.Drawing.Point(530, 98);
+            this.conditionLabel1.Name = "conditionLabel1";
+            this.conditionLabel1.Size = new System.Drawing.Size(100, 23);
+            this.conditionLabel1.TabIndex = 19;
+            this.conditionLabel1.Text = "label1";
+            // 
+            // intelligenceLabel1
+            // 
+            this.intelligenceLabel1.BackColor = System.Drawing.Color.White;
+            this.intelligenceLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Intelligence", true));
+            this.intelligenceLabel1.Location = new System.Drawing.Point(530, 121);
+            this.intelligenceLabel1.Name = "intelligenceLabel1";
+            this.intelligenceLabel1.Size = new System.Drawing.Size(100, 23);
+            this.intelligenceLabel1.TabIndex = 21;
+            this.intelligenceLabel1.Text = "label1";
+            // 
+            // wisdomLabel1
+            // 
+            this.wisdomLabel1.BackColor = System.Drawing.Color.White;
+            this.wisdomLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Wisdom", true));
+            this.wisdomLabel1.Location = new System.Drawing.Point(530, 144);
+            this.wisdomLabel1.Name = "wisdomLabel1";
+            this.wisdomLabel1.Size = new System.Drawing.Size(100, 23);
+            this.wisdomLabel1.TabIndex = 23;
+            this.wisdomLabel1.Text = "label1";
+            // 
+            // charismaLabel1
+            // 
+            this.charismaLabel1.BackColor = System.Drawing.Color.White;
+            this.charismaLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Charisma", true));
+            this.charismaLabel1.Location = new System.Drawing.Point(530, 167);
+            this.charismaLabel1.Name = "charismaLabel1";
+            this.charismaLabel1.Size = new System.Drawing.Size(100, 23);
+            this.charismaLabel1.TabIndex = 25;
+            this.charismaLabel1.Text = "label1";
+            // 
+            // total_ScoreLabel1
+            // 
+            this.total_ScoreLabel1.BackColor = System.Drawing.Color.White;
+            this.total_ScoreLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Total Score", true));
+            this.total_ScoreLabel1.Location = new System.Drawing.Point(204, 121);
+            this.total_ScoreLabel1.Name = "total_ScoreLabel1";
+            this.total_ScoreLabel1.Size = new System.Drawing.Size(100, 23);
+            this.total_ScoreLabel1.TabIndex = 27;
+            this.total_ScoreLabel1.Text = "label1";
+            // 
+            // special_TraitsLabel1
+            // 
+            this.special_TraitsLabel1.BackColor = System.Drawing.Color.White;
+            this.special_TraitsLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.heroesBindingSource, "Special Traits", true));
+            this.special_TraitsLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.special_TraitsLabel1.Location = new System.Drawing.Point(102, 198);
+            this.special_TraitsLabel1.Name = "special_TraitsLabel1";
+            this.special_TraitsLabel1.Size = new System.Drawing.Size(526, 23);
+            this.special_TraitsLabel1.TabIndex = 29;
+            this.special_TraitsLabel1.Text = "label1";
             // 
             // searchTextBox
             // 
             this.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.searchTextBox.DetectUrls = false;
+            this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.searchTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.searchTextBox.Location = new System.Drawing.Point(393, 195);
+            this.searchTextBox.Location = new System.Drawing.Point(3, 14);
             this.searchTextBox.Multiline = false;
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.searchTextBox.Size = new System.Drawing.Size(765, 41);
             this.searchTextBox.TabIndex = 1;
-            this.searchTextBox.Text = "rrewrweryyy";
+            this.searchTextBox.Text = "";
+            this.searchTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.searchTextBox_MouseClick);
             this.searchTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
             // 
-            // pictureBox1
+            // searchBasicToolStrip
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 260);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(769, 578);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
+            this.searchBasicToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.searchBasicToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.qToolStripLabel,
+            this.qToolStripTextBox,
+            this.searchBasicToolStripButton});
+            this.searchBasicToolStrip.Location = new System.Drawing.Point(0, 27);
+            this.searchBasicToolStrip.Name = "searchBasicToolStrip";
+            this.searchBasicToolStrip.Size = new System.Drawing.Size(1555, 27);
+            this.searchBasicToolStrip.TabIndex = 34;
+            this.searchBasicToolStrip.Text = "searchBasicToolStrip";
+            // 
+            // qToolStripLabel
+            // 
+            this.qToolStripLabel.Name = "qToolStripLabel";
+            this.qToolStripLabel.Size = new System.Drawing.Size(23, 24);
+            this.qToolStripLabel.Text = "Q:";
+            // 
+            // qToolStripTextBox
+            // 
+            this.qToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.qToolStripTextBox.Name = "qToolStripTextBox";
+            this.qToolStripTextBox.Size = new System.Drawing.Size(100, 27);
+            // 
+            // searchBasicToolStripButton
+            // 
+            this.searchBasicToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.searchBasicToolStripButton.Name = "searchBasicToolStripButton";
+            this.searchBasicToolStripButton.Size = new System.Drawing.Size(91, 24);
+            this.searchBasicToolStripButton.Text = "SearchBasic";
+            this.searchBasicToolStripButton.Click += new System.EventHandler(this.searchBasicToolStripButton_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(790, 55);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 35;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblSearchResultNumber
+            // 
+            this.lblSearchResultNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblSearchResultNumber.AutoSize = true;
+            this.lblSearchResultNumber.BackColor = System.Drawing.Color.White;
+            this.lblSearchResultNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblSearchResultNumber.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblSearchResultNumber.Location = new System.Drawing.Point(808, 824);
+            this.lblSearchResultNumber.Name = "lblSearchResultNumber";
+            this.lblSearchResultNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblSearchResultNumber.Size = new System.Drawing.Size(103, 25);
+            this.lblSearchResultNumber.TabIndex = 36;
+            this.lblSearchResultNumber.Text = "search res";
+            this.lblSearchResultNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panelResultDetails
+            // 
+            this.panelResultDetails.BackColor = System.Drawing.Color.White;
+            this.panelResultDetails.Controls.Add(nameLabel);
+            this.panelResultDetails.Controls.Add(this.special_TraitsLabel1);
+            this.panelResultDetails.Controls.Add(special_TraitsLabel);
+            this.panelResultDetails.Controls.Add(this.total_ScoreLabel1);
+            this.panelResultDetails.Controls.Add(total_ScoreLabel);
+            this.panelResultDetails.Controls.Add(this.nameLabel1);
+            this.panelResultDetails.Controls.Add(this.charismaLabel1);
+            this.panelResultDetails.Controls.Add(classLabel);
+            this.panelResultDetails.Controls.Add(charismaLabel);
+            this.panelResultDetails.Controls.Add(this.classLabel1);
+            this.panelResultDetails.Controls.Add(this.wisdomLabel1);
+            this.panelResultDetails.Controls.Add(alignmentLabel);
+            this.panelResultDetails.Controls.Add(wisdomLabel);
+            this.panelResultDetails.Controls.Add(this.alignmentLabel1);
+            this.panelResultDetails.Controls.Add(this.intelligenceLabel1);
+            this.panelResultDetails.Controls.Add(hiring_FeeLabel);
+            this.panelResultDetails.Controls.Add(intelligenceLabel);
+            this.panelResultDetails.Controls.Add(this.hiring_FeeLabel1);
+            this.panelResultDetails.Controls.Add(this.conditionLabel1);
+            this.panelResultDetails.Controls.Add(aboutLabel);
+            this.panelResultDetails.Controls.Add(conditionLabel);
+            this.panelResultDetails.Controls.Add(this.aboutLabel1);
+            this.panelResultDetails.Controls.Add(this.dexterityLabel1);
+            this.panelResultDetails.Controls.Add(strengthLabel);
+            this.panelResultDetails.Controls.Add(dexterityLabel);
+            this.panelResultDetails.Controls.Add(this.strengthLabel1);
+            this.panelResultDetails.Location = new System.Drawing.Point(12, 236);
+            this.panelResultDetails.Name = "panelResultDetails";
+            this.panelResultDetails.Size = new System.Drawing.Size(765, 576);
+            this.panelResultDetails.TabIndex = 37;
+            // 
+            // searchAdvancedToolStrip
+            // 
+            this.searchAdvancedToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.searchAdvancedToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.qToolStripLabel1,
+            this.qToolStripTextBox1,
+            this.searchAdvancedToolStripButton});
+            this.searchAdvancedToolStrip.Location = new System.Drawing.Point(0, 54);
+            this.searchAdvancedToolStrip.Name = "searchAdvancedToolStrip";
+            this.searchAdvancedToolStrip.Size = new System.Drawing.Size(1555, 27);
+            this.searchAdvancedToolStrip.TabIndex = 38;
+            this.searchAdvancedToolStrip.Text = "searchAdvancedToolStrip";
+            // 
+            // qToolStripLabel1
+            // 
+            this.qToolStripLabel1.Name = "qToolStripLabel1";
+            this.qToolStripLabel1.Size = new System.Drawing.Size(23, 24);
+            this.qToolStripLabel1.Text = "Q:";
+            // 
+            // qToolStripTextBox1
+            // 
+            this.qToolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.qToolStripTextBox1.Name = "qToolStripTextBox1";
+            this.qToolStripTextBox1.Size = new System.Drawing.Size(100, 27);
+            // 
+            // searchAdvancedToolStripButton
+            // 
+            this.searchAdvancedToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.searchAdvancedToolStripButton.Name = "searchAdvancedToolStripButton";
+            this.searchAdvancedToolStripButton.Size = new System.Drawing.Size(123, 24);
+            this.searchAdvancedToolStripButton.Text = "SearchAdvanced";
+            this.searchAdvancedToolStripButton.Click += new System.EventHandler(this.searchAdvancedToolStripButton_Click);
+            // 
+            // heroesTableAdapter
+            // 
+            this.heroesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.heroesTableAdapter = this.heroesTableAdapter;
+            this.tableAdapterManager.UpdateOrder = YourLocalHero.HeroesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // searchPanel
+            // 
+            this.searchPanel.BackColor = System.Drawing.Color.Black;
+            this.searchPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.searchPanel.Controls.Add(this.searchTextBox);
+            this.searchPanel.Controls.Add(this.pictureBox2);
+            this.searchPanel.Location = new System.Drawing.Point(389, 131);
+            this.searchPanel.Name = "searchPanel";
+            this.searchPanel.Size = new System.Drawing.Size(764, 52);
+            this.searchPanel.TabIndex = 40;
+            // 
+            // lblHints
+            // 
+            this.lblHints.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblHints.AutoSize = true;
+            this.lblHints.BackColor = System.Drawing.Color.White;
+            this.lblHints.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblHints.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblHints.Location = new System.Drawing.Point(12, 824);
+            this.lblHints.Name = "lblHints";
+            this.lblHints.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblHints.Size = new System.Drawing.Size(53, 25);
+            this.lblHints.TabIndex = 41;
+            this.lblHints.Text = "hints";
+            this.lblHints.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBoxBG
+            // 
+            this.pictureBoxBG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxBG.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBG.Image")));
+            this.pictureBoxBG.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxBG.InitialImage")));
+            this.pictureBoxBG.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxBG.Name = "pictureBoxBG";
+            this.pictureBoxBG.Size = new System.Drawing.Size(1555, 858);
+            this.pictureBoxBG.TabIndex = 42;
+            this.pictureBoxBG.TabStop = false;
+            this.pictureBoxBG.WaitOnLoad = true;
+            this.pictureBoxBG.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.BackColor = System.Drawing.Color.White;
+            this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblVersion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblVersion.Location = new System.Drawing.Point(1489, 824);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblVersion.Size = new System.Drawing.Size(54, 25);
+            this.lblVersion.TabIndex = 43;
+            this.lblVersion.Text = "v 1.0";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1555, 858);
-            this.Controls.Add(this.invButton);
-            this.Controls.Add(this.version);
-            this.Controls.Add(nameLabel);
-            this.Controls.Add(this.nameLabel1);
-            this.Controls.Add(classLabel);
-            this.Controls.Add(this.classLabel1);
-            this.Controls.Add(alignmentLabel);
-            this.Controls.Add(this.alignmentLabel1);
-            this.Controls.Add(hiring_FeeLabel);
-            this.Controls.Add(this.hiring_FeeLabel1);
-            this.Controls.Add(aboutLabel);
-            this.Controls.Add(this.aboutLabel1);
-            this.Controls.Add(strengthLabel);
-            this.Controls.Add(this.strengthLabel1);
-            this.Controls.Add(dexterityLabel);
-            this.Controls.Add(this.dexterityLabel1);
-            this.Controls.Add(conditionLabel);
-            this.Controls.Add(this.conditionLabel1);
-            this.Controls.Add(intelligenceLabel);
-            this.Controls.Add(this.intelligenceLabel1);
-            this.Controls.Add(wisdomLabel);
-            this.Controls.Add(this.wisdomLabel1);
-            this.Controls.Add(charismaLabel);
-            this.Controls.Add(this.charismaLabel1);
-            this.Controls.Add(total_ScoreLabel);
-            this.Controls.Add(this.total_ScoreLabel1);
-            this.Controls.Add(special_TraitsLabel);
-            this.Controls.Add(this.special_TraitsLabel1);
+            this.Controls.Add(this.lblVersion);
+            this.Controls.Add(this.lblHints);
+            this.Controls.Add(this.searchPanel);
+            this.Controls.Add(this.searchAdvancedToolStrip);
+            this.Controls.Add(this.panelResultDetails);
+            this.Controls.Add(this.lblSearchResultNumber);
+            this.Controls.Add(this.searchBasicToolStrip);
             this.Controls.Add(this.heroesDataGridView);
             this.Controls.Add(this.heroesBindingNavigator);
-            this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.ylhLogo);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxBG);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -795,13 +947,21 @@
             this.Text = "Your Local Hero - Hire best heroes from the Sword Coast and beyond!";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ylhLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heroesDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heroesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heroesBindingNavigator)).EndInit();
             this.heroesBindingNavigator.ResumeLayout(false);
             this.heroesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.heroesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heroesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heroesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.searchBasicToolStrip.ResumeLayout(false);
+            this.searchBasicToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelResultDetails.ResumeLayout(false);
+            this.panelResultDetails.PerformLayout();
+            this.searchAdvancedToolStrip.ResumeLayout(false);
+            this.searchAdvancedToolStrip.PerformLayout();
+            this.searchPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -841,6 +1001,19 @@
         private System.Windows.Forms.Label charismaLabel1;
         private System.Windows.Forms.Label total_ScoreLabel1;
         private System.Windows.Forms.Label special_TraitsLabel1;
+        private System.Windows.Forms.RichTextBox searchTextBox;
+        private System.Windows.Forms.ToolStrip searchBasicToolStrip;
+        private System.Windows.Forms.ToolStripLabel qToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox qToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton searchBasicToolStripButton;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblSearchResultNumber;
+        private System.Windows.Forms.Panel panelResultDetails;
+        private System.Windows.Forms.ToolStrip searchAdvancedToolStrip;
+        private System.Windows.Forms.ToolStripLabel qToolStripLabel1;
+        private System.Windows.Forms.ToolStripTextBox qToolStripTextBox1;
+        private System.Windows.Forms.ToolStripButton searchAdvancedToolStripButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -855,10 +1028,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.Label version;
-        private System.Windows.Forms.Button invButton;
-        private System.Windows.Forms.RichTextBox searchTextBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel searchPanel;
+        private System.Windows.Forms.Label lblHints;
+        private System.Windows.Forms.PictureBox pictureBoxBG;
+        private System.Windows.Forms.Label lblVersion;
     }
 }
 
