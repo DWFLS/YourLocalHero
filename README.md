@@ -1,4 +1,4 @@
-YourLocalHero v1.0
+YourLocalHero v1.0.0.1
 
 
 by DWFLS
@@ -11,6 +11,13 @@ Features:
 - More details after selecting query result.
 - Random search hints.
 - Admin/user switch by typin --admin/--user in the searchbox.
+
+
+Version history
+
+v1.0.0.1
+
+- Readjusted leftside panel.
 
 
 To-do:
