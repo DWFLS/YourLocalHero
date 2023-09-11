@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[heroes] (
+﻿32CREATE TABLE [dbo].[heroes] (
     [Id]             INT           IDENTITY (0,1) NOT NULL,
     [Name]           NVARCHAR (50) NOT NULL,
     [Class]          NVARCHAR (15) NOT NULL,

@@ -738,7 +738,7 @@
             this.qToolStripLabel,
             this.qToolStripTextBox,
             this.searchBasicToolStripButton});
-            this.searchBasicToolStrip.Location = new System.Drawing.Point(0, 27);
+            this.searchBasicToolStrip.Location = new System.Drawing.Point(0, 54);
             this.searchBasicToolStrip.Name = "searchBasicToolStrip";
             this.searchBasicToolStrip.Size = new System.Drawing.Size(1555, 27);
             this.searchBasicToolStrip.TabIndex = 34;
@@ -831,7 +831,7 @@
             this.qToolStripLabel1,
             this.qToolStripTextBox1,
             this.searchAdvancedToolStripButton});
-            this.searchAdvancedToolStrip.Location = new System.Drawing.Point(0, 54);
+            this.searchAdvancedToolStrip.Location = new System.Drawing.Point(0, 27);
             this.searchAdvancedToolStrip.Name = "searchAdvancedToolStrip";
             this.searchAdvancedToolStrip.Size = new System.Drawing.Size(1555, 27);
             this.searchAdvancedToolStrip.TabIndex = 38;
@@ -928,13 +928,13 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1555, 858);
+            this.Controls.Add(this.searchBasicToolStrip);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.lblHints);
             this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.searchAdvancedToolStrip);
             this.Controls.Add(this.panelResultDetails);
             this.Controls.Add(this.lblSearchResultNumber);
-            this.Controls.Add(this.searchBasicToolStrip);
             this.Controls.Add(this.heroesDataGridView);
             this.Controls.Add(this.heroesBindingNavigator);
             this.Controls.Add(this.ylhLogo);

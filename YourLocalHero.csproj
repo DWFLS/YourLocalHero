@@ -132,6 +132,30 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>heroes.mdf</DependentUpon>
     </Content>
+    <Content Include="portrait\alora.png" />
+    <Content Include="portrait\branwen.png" />
+    <Content Include="portrait\coran.png" />
+    <Content Include="portrait\dynaheir.png" />
+    <Content Include="portrait\edwin.png" />
+    <Content Include="portrait\eldoth.png" />
+    <Content Include="portrait\faldorn.png" />
+    <Content Include="portrait\garrick.png" />
+    <Content Include="portrait\imoen.png" />
+    <Content Include="portrait\jaheira.png" />
+    <Content Include="portrait\kagain.png" />
+    <Content Include="portrait\khalid.png" />
+    <Content Include="portrait\kivan.png" />
+    <Content Include="portrait\minsc.png" />
+    <Content Include="portrait\montaron.png" />
+    <Content Include="portrait\quayle.png" />
+    <Content Include="portrait\safana.png" />
+    <Content Include="portrait\shaar.png" />
+    <Content Include="portrait\skie.png" />
+    <Content Include="portrait\tiax.png" />
+    <Content Include="portrait\viconia.png" />
+    <Content Include="portrait\xan.png" />
+    <Content Include="portrait\xzar.png" />
+    <Content Include="portrait\yeslick.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
